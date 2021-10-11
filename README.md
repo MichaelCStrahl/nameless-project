@@ -2,6 +2,7 @@
 
 This is a base repository for new Adonis5 projects. It includes:
 
+- All routes DOCUMENTED inside Insomnia.yaml (Docs tab)
 - Authentication (using API tokens)
 - Definition of roles (middleware RoleDetector)
 - AWS S3 / SES integration
