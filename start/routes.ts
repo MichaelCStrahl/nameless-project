@@ -28,12 +28,9 @@ Route.group(() => {
   Route.put('/users/:id/change-password', 'UserController.updateUserPassword')
   Route.get('/users/:id/profile-pictures', 'UserController.getUserProfilePicture')
   Route.post('/users/:id/profile-pictures', 'UserController.storeUserProfilePicture')
-
 })
   .namespace('App/Controllers/Http/Admin')
   .prefix('admin')
   .middleware(['auth', 'role:admin'])
 
-
 // ...
-

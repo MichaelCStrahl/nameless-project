@@ -4,7 +4,6 @@ import { column, beforeSave, BaseModel, hasOne, HasOne } from '@ioc:Adonis/Lucid
 import Admin from './Admin'
 
 export default class User extends BaseModel {
-
   @column({ isPrimary: true })
   public id: number
 

@@ -20,5 +20,4 @@ export default class Admin extends BaseModel {
 
   @belongsTo(() => User)
   public user: BelongsTo<typeof User>
-
 }

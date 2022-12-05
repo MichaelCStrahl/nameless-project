@@ -6,7 +6,6 @@ import SessionUserValidator from 'App/Validators/SessionUserValidator'
 import UserHelper from 'App/Helpers/UserHelper'
 
 export default class SessionsController {
-
   public async create({ auth, request, response }: HttpContextContract) {
     const { email, password } = await request.validate(SessionUserValidator)
     try {
@@ -24,7 +23,7 @@ export default class SessionsController {
       await auth.use('api').revoke()
       return response.ok({})
     }
-    return response.badRequest("You are not logged in")
+    return response.badRequest('You are not logged in')
   }
 
   public async validate({ auth, request, response }: HttpContextContract) {
