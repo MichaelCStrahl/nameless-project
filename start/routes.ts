@@ -32,5 +32,3 @@ Route.group(() => {
   .namespace('App/Controllers/Http/Admin')
   .prefix('admin')
   .middleware(['auth', 'role:admin'])
-
-// ...
