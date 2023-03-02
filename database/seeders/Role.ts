@@ -8,7 +8,7 @@ export default class RoleSeeder extends BaseSeeder {
       await trx.table('roles').multiInsert([
         { slug: 'admin', description: 'manage administrator privileges' },
         { slug: 'company', description: 'manage company privileges' },
-        { slug: 'collaborator', description: 'manage collaborator privileges' },
+        { slug: 'employee', description: 'manage employee privileges' },
       ])
       await trx.commit()
     } catch (error) {
