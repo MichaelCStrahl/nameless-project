@@ -1,53 +1,22 @@
-# adonis5-base-project
+O projeto em questão já está pronto para a execução, incluindo conexão com banco de dados
 
-This is a base repository for new Adonis5 projects. It includes:
+O objetivo da atividade é rodar o projeto localmente seguindo os passos:
 
-- All routes DOCUMENTED inside Insomnia.yaml (Docs tab)
-- Authentication (using API tokens)
-- Definition of roles (middleware RoleDetector)
-- AWS S3 / SES integration
-- Basic migration/models/controllers for users, roles, tokens, profile pictures, user password
-- Validators 
-- Basic Admin routes (controllers methods, migration and model)
+- criar um arquivo .env idêntico ao .env.exemplo
+- executar os comandos `~ yarn; yarn dev`
 
+- compreender a estrutura das tabelas através das proprias migrations e models existentes
+- criar uma nova entidade (migration e model) para representar um employee (colunas da tabela são de livre escolha)
+- criar um novo controller que gerencie o crud de employees
+- criar os endpoints para acessar as funcionalidades da api
 
-## Requirements
+critérios:
 
-- Node.js (& npm) 
-- Yarn
-- SGBD (e.g MySQL)
+- criação, listagem e deleção de employees funcionando corretamente
+- relação entre as tabelas de users e employees funcionando corretamente
 
+extra:
 
-## Install
-
-```sh
-  $ yarn install
-```
-
-
-## Prepare environment
-```sh
-  cp .env.example .env
-```
-
-
-## Run migrations and seed database
-
-```sh
-  $ node ace migration:run
-  $ node ace db:seed
-```
-
-
-## Serve
-
-```sh
-  $ yarn dev
-```
-
-
-## Linter
-
-```sh
-  $ yarn lint --fix
-```
+- gestão dos roles adequada nos models e controllers
+- controle de acesso dos endpoints permitindo acesso apenas pelo usuário admin (dados de login no arquivo .env)
+- incrementos adicionais são sempre bem vindos
