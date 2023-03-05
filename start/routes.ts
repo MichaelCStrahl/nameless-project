@@ -7,6 +7,7 @@ Route.get('/', async () => {
 /* Session routes */
 Route.post('sessions', 'SessionsController.create')
 Route.post('/sessions/validate', 'SessionController.validate')
+Route.resource('/employees', 'EmployeesController').apiOnly()
 
 /* Forgot password routes */
 Route.post('users/forgot-password', 'ForgotPasswordController.store')
